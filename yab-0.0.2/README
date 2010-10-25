@@ -1,0 +1,30 @@
+README
+===================
+
+This is yet another [launch] bar (hence the name - yab), because 
+adesklets was needing at least one. Nothing new under the sun - 
+a very classic bar, yet reasonably polished, highly configurable and
+resources limit aware (In fact, it can be made really frugal by turning
+off the right options - see the `config.txt.minimal' example).
+
+This desklet does not have any requirements other than adesklets >=
+0.4.0 with python support enabled (default), but it will absolutely
+refuse to work on anything older. It was tested on python 2.4.0 final, 
+on a linux 2.6.10 glibc 2.3.4 x86 machine.
+
+Just run the `yab.py' script from its final location on you disk
+to start the desklet: of course, you need to have adesklets installed.
+With your favorite editor, you may edit config.txt for settings
+specific to this desklet.
+
+Have a look at http://adesklets.sf.net/ for more details on this program.
+
+What's new in version 0.0.2
+---------------------------
+
+Nothing, really. It's only a maintenance release to switch to the 
+ConfigFile class now included in adesklets.utils since 
+adesklets 0.4.0.
+
+
+===================

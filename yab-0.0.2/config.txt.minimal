@@ -1,0 +1,49 @@
+#
+#    This is a example configuration file for the launcher desklet with
+#    all dynamic effect turned off on desklet #0, which make the desklet 
+#    use about no CPU cycles.
+#
+#    The effects turned off are:
+#
+#    - The caption label ('caption_font' is None)
+#    - The caption fading ('caption_fade_in' is False)
+#    - Initial caption wait before refreshment ('caption_delay' is 0)
+#    - Icons zoom in / Icons zoom out (icons minimal dimensions are the
+#      same as the maximum ones)
+#    - Icon gradual zoom in ('icon_maximum_threshold' is 0)
+#    - Effect on click ('click_effect' is None)
+#
+#    All those effects can be turned off independently from one another.
+#
+#    Others parameters change the look of things, but have no significant 
+#    impact on ressource usage.
+#
+
+id0 = {'bar_background_1': 'AAAAAA',
+ 'bar_background_2': None,
+ 'bar_foreground': '000000',
+ 'bar_gradient_angle': 0,
+ 'bar_height': 32,
+ 'bar_opacity_1': 100,
+ 'bar_opacity_2': None,
+ 'caption_above': True,
+ 'caption_color': '7F748A',
+ 'caption_delay': 0,
+ 'caption_fade_in': False,
+ 'caption_fade_in_duration': 0.5,
+ 'caption_fade_in_steps': 10,
+ 'caption_font': None,
+ 'caption_size': None,
+ 'click_effect': None,
+ 'click_effect_duration': None,
+ 'icon_max_height': 64,
+ 'icon_max_width': 64,
+ 'icon_maximize_threshold': 0,
+ 'icon_min_height': 64,
+ 'icon_min_width': 64,
+ 'icon_spacing': 5,
+ 'icons': [('emacs.png', 'GNU Emacs', 'emacs'),
+           ('firefox.png', 'Firefox', 'firefox'),
+           ('gimp.png', 'The GIMP', 'gimp-2.0'),
+           ('terminal.png', 'Terminal', 'xterm'),
+           ('xmms.png', 'Xmms', 'xmms')]}

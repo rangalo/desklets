@@ -1,0 +1,113 @@
+# -*- coding: ASCII -*-
+#
+#================================================================================
+#    This is the configuration file for the adesklets' desklet
+#    `Yet Another Bar' (yab).
+#
+#    You may specify here, for each yab instance you use,
+#    what icons should be loaded (stored under `icons/' by default,
+#    but absolute path names are also valid), what commands they should trigger,
+#    what the captions should be, what font to use, how generating effects,
+#    etc.
+#
+#    See `config.txt.minimal' in this directory for the configuration
+#    of the completely static (all effects turned off) version of the
+#    default bar with some explanations.
+#
+#    There is no real need for a long explanation here, since
+#    a lot of yab configuration parameters are self explanatory.
+#    Let us just mention here some specific, less obvious elements:
+#
+#    - colors are expressed as packed RGB hexadecimal on 24 bits
+#    (1 unsigned byte per channel), as you can use within HTML documents
+#    for instance: '000000' is pure black, while 'FFFFFF' is pure white.
+#
+#    - similarily, opacities are given as unsigned one byte decimal
+#    integer value (hence in [0, 255])
+#
+#    - gradient_angle is given in degree, not radians, with 0 degrees being
+#    vertical from top to bottom and going clockwise from there.
+#    
+#    - all parameters expressing times are in seconds. On most systems,
+#    resulting timing of less than 10 milliseconds are not reliable and
+#    should be avoided.
+#    
+#    - many parameters can be set to None, zero or similar values, resulting
+#    in a more frugal, less dynamic desklet - see `config.txt.minimal' for
+#    a more complete exemplification of this.
+#
+#    - the 'click_effect' parameter, if not set to None, is an imlib2
+#    dynamic filter expression that will get applied to the icon you just
+#    clicked on for 'click_effect_duration' seconds before being discarded.
+#    See your imlib2 documentation for details.
+#
+#    - the 'icon_maximize_threshold' specifies at what fraction of maximal
+#    size the icon under the pointer should be displayed as completly
+#    maximized (set to 90% by default). It gives a way to define a 'hot zone'
+#    around the icon center's x coordinate in which the pointer can move
+#    and the icon stay stuck on its maximum size anyway. Setting this
+#    to 0 would make an icon being maximized as soon as the pointer
+#    get over it, and setting it to 1 to never get 'pinned' on maximum
+#    size as long as the pointer does not reach its very center
+#    (thus being smoothly resized from the minimal to the maximal size).
+#
+#    - all configuration parameters are handled the 'pythonic way', meaning
+#    that as few checkups as possible are performed, invalid entries leading
+#    to runtime exceptions being raised. For instance, building a bar
+#    longer than its screen width will raise a 'did not resize window' error.
+#
+#    So, whenever you run into trouble configuring a yab instance, you should:
+#
+#    	* Kill all adesklets instances running:
+#
+#    		killall -9 adesklets
+#
+#    	* Restart the troublemaker from the console using
+#        (XXX being its ID number):
+#    
+#    		ADESKLETS_ID=XXX python yab.py	
+#
+#        * Look at the error output to figure things out.
+#
+#    Finally, please note that destroying this config file while no yab instances
+#    are running will force its repopulation with valid default
+#    entries on yap's desklets restart.
+#    
+#    === Special note on icons ===
+#    
+#    Only a few icons are shipped with yab (five, actually).
+#    In case you are wondering, they all come from the Lila theme
+#    resources (http://lila-theme.uni.cc/). If you go hunting
+#    for more iconographic artwork, http://www.kde-look.org/
+#    is also a good start point.
+#================================================================================
+#    
+id0 = {'bar_background_1': 'AAAAAA',
+ 'bar_background_2': None,
+ 'bar_foreground': '000000',
+ 'bar_gradient_angle': 0,
+ 'bar_height': 16,
+ 'bar_opacity_1': 100,
+ 'bar_opacity_2': None,
+ 'caption_above': False,
+ 'caption_color': 'AAAAAA',
+ 'caption_delay': 0.10000000000000001,
+ 'caption_fade_in': True,
+ 'caption_fade_in_duration': 0.5,
+ 'caption_fade_in_steps': 10,
+ 'caption_font': 'Vera',
+ 'caption_size': 10,
+ 'click_effect': 'tint(alpha=100,red=255,green=255,blue=255);',
+ 'click_effect_duration': 0.10000000000000001,
+ 'icon_max_height': 64,
+ 'icon_max_width': 64,
+ 'icon_maximize_threshold': 0.90000000000000002,
+ 'icon_min_height': 32,
+ 'icon_min_width': 32,
+ 'icon_spacing': 5,
+ 'icons': [('firefox.png', 'Firefox', 'firefox'),
+           ('chromium.png', 'chromium', 'chromium'),
+           ('terminal.png', 'Terminal', 'xterm'),
+           ('smplayer.png', 'SMPlayer', 'smplayer'),
+           ('eclipse.png', 'Eclipse', '/home/hardik/bin/eclipse'),
+           ('gwenview.png', 'Gwenview', 'gwenview')]}

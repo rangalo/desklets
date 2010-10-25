@@ -1,0 +1,6 @@
+# -*- coding: ASCII -*-
+id0 = {'click_delay': 2,
+ 'height': 25,
+ 'layouts': [('us.gif', 'us'), ('de.gif', 'de')],
+ 'refreshrate': 2,
+ 'width': 45}

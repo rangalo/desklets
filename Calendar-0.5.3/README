@@ -1,0 +1,36 @@
+Author:
+darkliquid <darkliquid@darkliquid.co.uk>
+
+Description:
+An basic Calendar desklet
+
+Requirements:
+adesklets, python with calendar module, Tkinter module for alarm features
+
+How to run:
+The running of the file is simple, just do: ./Calendar.py (the file shoud be executable, if not run chmod u+x ./Calendar.py) at the console.
+
+Features:
+Now, new and improved, this desklet includes the following features
+* Customisable header cell (font, font colour, border colour, background colour)
+* Customisable day cells (font, font colour, border colour, background colour)
+* Customisable date cells (font, font colour, border colour, background colour)
+* Customisable today cell (font, font colour, border colour, background colour)
+* Customisable past days cells (font, font colour, border colour, background colour)
+* Customisable cell padding between cells
+* Calendar automatically scales to accomodate the largest font
+* You can now set which day is the first say of the week (0 = Monday, 6 = Sunday)
+* You can set an month offset so you can display a calendar x amount of months and y amount of years in the past or future, ie: month_offset: 6, year_offset: 1 would show a calendar 1 year 6 months in the future. To set dates in the past, use an offset as normal and then set the month_offset_negative or year_offset_negative values to True
+* You can now set alarms/reminders/todos/etc using the context menu. At the moment you can not have multiple ones per day. Alarms trigger as soon as a day occurs.
+* You can browse months and years on the calendar by using the Next and Prev buttons on the context menu
+
+Themeing:
+For the moment, themeing can be done through the config.txt file that will be generated when first running the desklet.
+When setting colours, use HTML style colour codes. If you want to set alpha transparency, you can do so like this:
+'FFFFFF' = fully white, 'FFFFFF80' = white at 50% transparency. Note the extra hex byte value for transparency.
+To remove border/backgrounds/etc just set the colour to 100% transparency
+
+Planned:
+* Adding a simple way to include theme classes that override the standard theme (hardish)
+* Adding a way to set reminders that are triggered time-specifically (easyish)
+* Other stuff I have yet to think of (?)

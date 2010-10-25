@@ -1,0 +1,95 @@
+README - adeskclock
+===================
+
+About:
+======
+
+adeskclock, an adesklet (http://adesklets.sourceforge.net), is a simple 
+analogue clock for your desktop released under GNU/GPL (See `COPYING' 
+file for license). 
+
+Authors:
+========
+
+Jon McCormack <jonmack@users.sourceforge.net> - code
+Phil <> - skins
+Igor <> - skins
+
+Fake Maintainer:
+================
+
+Sylvain Fourmanoit <syfou@users.sourceforge.net> 
+
+NOTE: I put this online because the desklet is already working OK,
+even if not actively maintained anymore. It is not my code, and I am
+not sure if I will bring it up to speed yet. If anyone is interested
+doing real work on it, just let me know, and I will be happy to pass
+the hand.
+
+The original file did contain a subversion tree: you can get it online
+from http://www16.brinkster.com/jonmack/python/ .
+
+Requirements:
+=============
+
+Initially developed and tested using 
+ - adesklets 0.4.3
+ - linux 2.6.9 
+ - gcc 3.3.5 
+ - python 2.3.4
+
+Running:
+========
+
+Simply run the `adeskclock.py' script from within its containing directory.
+
+Further Notes:
+==============
+
+At this time no external configuration file is available for this adesklet.
+Editing the `defaultConfig' dictionary in the `adeskclock.py' script is still
+possible, but just be careful ;) Customisation instructions will be included 
+in near future versions.
+
+Version History:
+================
+
+v0.1.0
+ - major rewrite started to accommodate new things.
+ - added custom right-click menu for toggling second hand and editing config.
+ - refreshRate variable instead of hard coded.
+ - hour hand now points to fifths of an hour, instead of quarters - this is more
+   like a real clock, where hour hand clicks to minute markers.
+ - hand dimensions (needed for rotating) are calculated automatically now.
+ - skins now loaded from separate directory: /path/to/adeskclock/skin/<skin_name>/
+
+v0.0.5
+ - Cleaning up this README ready for applying for official adesklet status :)
+ - Reduced multiple time.time() calls to single time call. 
+
+v0.0.4
+ - Clock face art now has hour dots.
+ - Hour hand will now show to nearest quarter of an hour.
+ - Split up angle calculation functions back from 0.0.3 for new hour
+   hand behaviour. Plan is the new spam! Plan, plan, plan, plan...!
+ - Known bug: hands are rotated not round a common point, but by the 
+   hand images' top-left corner. So the hands are slightly off-set 
+   from the centre of the clock. Annoying, but not so bad looking if
+   clockface art has a big blob to cover that region :)
+
+v0.0.3
+ - Cleaned up angle calculations to one function.
+
+v0.0.2
+ - Fixed: clock face graphic not scaling to window size (Thanks to ZeroDivide
+   on adesklets forums)
+ - Added: New art for clock face and all hands. Vector debugging stuff still in
+   there, but there's something wrong with Bresenham algorithm? (Thanks to syfou
+   on adesklets forums for checking this)
+ - It's at the stage where it at least tells the right time ;)
+
+v0.0.1
+ - First released version. Done after a only a few hours of learning python!
+ - Still a bit buggy, but hopefully help will be found :)
+
+===================
