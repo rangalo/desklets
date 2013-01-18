@@ -62,7 +62,7 @@ class KbdLayout:
     def switchKbdLayout(self):
         self.update()
         lCmd = "setxkbmap -layout " + self._nextLayout
-        print(lCmd)
+        # print(lCmd)
         args = shlex.split(lCmd)
         process  = subprocess.Popen(args)
         lStatus = process.wait()
@@ -71,6 +71,8 @@ class KbdLayout:
             lIndexFile = open(self._indexFile,"w")
             lIndexFile.write(str(self._nextIndex))
             lIndexFile.close()
+            self.update()
+            print(self._layout)
         else:
             print("Could not set the keybord layout: ",  self._nextLayout, "\nError:"+lOutput)
 
